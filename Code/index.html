@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset = "utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="assets/jQuery/jquery.validate.js"></script>
+	<link href="assets/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+	<script src="assets/dist/js/datepicker.min.js"></script>
+	
+	<link href="style.css"  rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="script.js" ></script> 
+	
+	<title>Test assignment</title>
+	
+</head>
+
+<header></header>
+
+<body>
+
+<div id = "MeinPart" >
+
+	<p id = "Lable" >Депозитный калькулятор</p>
+	<p id = "Description" >Калькулятор депозитов позволяет рассчитать ваши доходы после внесения суммы на счет в банке по определенному тарифу.</p>
+	
+	
+	<form id = "form" >
+		<div id = "FormPart">
+		<div id = "1LineOfInput" class = "dInput">
+			<p class = "inputs"><input class = " datepicker-here" placeholder = "Дата открытия" id = "startDate" type= "text" name= "startDate" /></p>
+			<p class = "inputs">
+				<select id= "MonthOrYear" >
+				
+					<option id = "Month" value= "1" >Месяц</option>
+					<option id = "Year" value= "12" >Год</option>
+					
+				</select>
+				<input placeholder = "Срок вклада" id= "term" type= "text" name= "term" />
+
+			</p>
+		</div>		
+		<div id = "2LineOfInput" class = "dInput">
+			<p class = "inputs" ><input  placeholder = "Сумма вклада" id= "sum" type= "text" name= "sum" /></p>
+			<p class = "inputs" ><input placeholder = "Процентная ставка, % годовых" id= "percent" type= "text" name= "percent" /></p>	
+		</div>
+		<div id = "3LineOfInput" class = "dInput">
+			<label class = "inputs" id = "NextPaymentsLabel" >
+			
+				<input  id = "NextPayments" type= "checkbox" name = "NextPayments" checked />
+				Ежемемесячное пополнение вклада
+				
+			</label>
+			<p class = "inputs"><input  placeholder = "Сумма пополнения вклада" id= "sumAdd" type= "text" name= "sumAdd" /></p>
+		</div>
+
+		<input id="submit" type= "button" name= "submit" value = "Рассчитать" />
+	</div>
+	</form>
+	
+	<hr>
+	
+	<div id = "results"></div>
+
+</div>
+
+</body>
+
+</html>
